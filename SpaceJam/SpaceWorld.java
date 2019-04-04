@@ -20,6 +20,10 @@ public class SpaceWorld extends ScrollingWorld
         addObject(new bugs(),100, 300);
         ballCount = 0;
         bucketCount = 0;
+        if(Greenfoot.getRandomNumber(100) < 3)
+        {
+            addObject(new obstacles(), 600, Greenfoot.getRandomNumber(600));
+        }
     }
 
     public void act() {
