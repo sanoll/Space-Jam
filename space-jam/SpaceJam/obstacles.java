@@ -14,6 +14,10 @@ public class obstacles extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        setLocation(getX()-4, getY());
     }    
+    public void obstacleimg()
+    {
+        
+    }
 }

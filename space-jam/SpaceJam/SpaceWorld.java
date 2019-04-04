@@ -12,6 +12,7 @@ public class SpaceWorld extends ScrollingWorld
     int bucketCount;
     Basketball ball = new Basketball();
     Buckets goal = new Buckets();
+    obstacles obstacle = new obstacles();
     /**
      * Constructor for objects of class SpacWorld.
      * 
@@ -46,6 +47,16 @@ public class SpaceWorld extends ScrollingWorld
                 removeObject(goal);
             }
         }
+    }
+    public void obstacles() {
+        if (Greenfoot.getRandomNumber(100) < 3)
+        {
+            addObject(obstacle, 600, Greenfoot.getRandomNumber(600));
+            if (obstacle.getX() < 150) {
+                removeObject(obstacle);
+            }
+        }
+        
     }
     
     public int countBalls() {
