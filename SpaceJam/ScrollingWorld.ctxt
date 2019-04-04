@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ScrollingWorld
+comment0.text=\r\n\ This\ class\ is\ to\ create\ a\ scrolling\ world\ for\ our\ game.\r\n\ \r\n\ @author\ Dillon\ Thompson\ \r\n\ @version\ 4.2.19\r\n
+comment1.params=width\ height\ res\ bounded
+comment1.target=ScrollingWorld(int,\ int,\ int,\ boolean)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ ScrollingWorld.\r\n\ \r\n
+comment2.params=
+comment2.target=void\ scroll()
+numComments=3
