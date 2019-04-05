@@ -15,9 +15,18 @@ public class obstacles extends Actor
     public void act() 
     {
         setLocation(getX()-4, getY());
+        obstacleimg();
     }    
     public void obstacleimg()
     {
-        
+        if (Greenfoot.getRandomNumber(3) == 1) {
+            setImage("badguy22.png");
+        }
+        else if (Greenfoot.getRandomNumber(3) == 2){
+            setImage("badguy33.png");
+        }
+        else {
+            setImage("badguy44.png");
+        }
     }
 }

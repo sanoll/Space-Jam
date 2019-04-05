@@ -29,6 +29,7 @@ public class SpaceWorld extends ScrollingWorld
         scroll();
         balls();
         buckets();
+        obstacles();
     }
 
     public void balls() {
@@ -49,10 +50,10 @@ public class SpaceWorld extends ScrollingWorld
         }
     }
     public void obstacles() {
-        if (Greenfoot.getRandomNumber(100) < 3)
+        if (Greenfoot.getRandomNumber(100) == 1)
         {
             addObject(obstacle, 600, Greenfoot.getRandomNumber(600));
-            if (obstacle.getX() < 150) {
+            if (obstacle.getX() < 100) {
                 removeObject(obstacle);
             }
         }
