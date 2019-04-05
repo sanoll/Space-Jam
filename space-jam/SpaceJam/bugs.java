@@ -8,6 +8,7 @@ public class bugs extends Actor
      */
     public void act() 
     {
+        SpaceWorld world = (SpaceWorld) getWorld();
         if(Greenfoot.isKeyDown("down"))
         {
             setLocation(getX(),getY()+9);
@@ -17,6 +18,16 @@ public class bugs extends Actor
         {
             setLocation(getX(),getY()-9);
             setRotation(360);
+        }
+        Basketball ball = (Basketball) getOneIntersectingObject(Basketball.class);
+        if (ball != null) {
+            getWorld().removeObject(ball);
+            world.ballCount++;
+        }
+        Buckets goal = (Buckets) getOneIntersectingObject(Buckets.class);
+        if (goal != null) {
+            getWorld().removeObject(goal);
+            world.bucketCount++;
         }
     }
 }
