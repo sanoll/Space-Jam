@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SpaceWorld extends ScrollingWorld
 {
+    Counter counter= new Counter();
     int ballCount;
     int bucketCount;
     Basketball ball = new Basketball();
@@ -26,7 +27,7 @@ public class SpaceWorld extends ScrollingWorld
         addObject(new bugs(),100, 300);
         ballCount = 3;
         bucketCount = 0;
-        setPaintOrder(bugs.class, Basketball.class, Buckets.class);
+        setPaintOrder(bugs.class, Basketball.class, Buckets.class, Counter.class);
         addObject(new Counter(), 100, 40);
     }
 
@@ -52,6 +53,7 @@ public class SpaceWorld extends ScrollingWorld
             if (goal.isAtEdge()) {
                 removeObject(goal);
             }
+            
         }
     }
     public void obstacles() {
@@ -85,4 +87,8 @@ public class SpaceWorld extends ScrollingWorld
     public int countBuckets() {
         return bucketCount;
     }
+    public Counter getCounter()
+    {
+        return counter;
+}
 }

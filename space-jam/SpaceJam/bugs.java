@@ -27,7 +27,11 @@ public class bugs extends Actor
         Buckets goal = (Buckets) getOneIntersectingObject(Buckets.class);
         if (goal != null) {
             getWorld().removeObject(goal);
+            
             world.bucketCount++;
+            SpaceWorld spaceworld = (SpaceWorld)world;
+            Counter counter = spaceworld.getCounter();
+            counter.addScore();
         }
     }
 }
