@@ -16,6 +16,7 @@ public class obstacles extends Actor
     {
         setLocation(getX()-4, getY());
         obstacleimg();
+        
     }    
     public void obstacleimg()
     {
