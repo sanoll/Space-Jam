@@ -15,5 +15,6 @@ public class BadGuy1 extends obstacles
     public void act() 
     {
         move(-4);
+        removeTouching(bugs.class);
     }    
 }
