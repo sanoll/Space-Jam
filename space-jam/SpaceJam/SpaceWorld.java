@@ -13,7 +13,12 @@ public class SpaceWorld extends ScrollingWorld
     Basketball ball = new Basketball();
     Buckets goal = new Buckets();
     BadGuy1 b1 = new BadGuy1();
+<<<<<<< HEAD
     bugs bunny = new bugs();
+=======
+    BadGuy2 b2 = new BadGuy2();
+    BadGuy3 b3 = new BadGuy3();
+>>>>>>> 5edc0559bf2f8b0ab1faf0d01b98bfb81ea467ed
     /**
      * Constructor for objects of class SpacWorld.
      * 
@@ -24,7 +29,11 @@ public class SpaceWorld extends ScrollingWorld
         addObject(new bugs(),100, 300);
         ballCount = 0;
         bucketCount = 0;
+<<<<<<< HEAD
         setPaintOrder(bugs.class, Basketball.class, Buckets.class);
+=======
+        addObject(new Counter(), 100, 40);
+>>>>>>> 5edc0559bf2f8b0ab1faf0d01b98bfb81ea467ed
     }
 
     public void act() {
@@ -52,14 +61,27 @@ public class SpaceWorld extends ScrollingWorld
         }
     }
     public void obstacles() {
-        if (Greenfoot.getRandomNumber(100) == 1)
+        if (Greenfoot.getRandomNumber(30) == 1)
         {
             addObject(b1, 600, Greenfoot.getRandomNumber(600));
             if (b1.getX() < 100) {
                 removeObject(b1);
             }
         }
-        
+        if (Greenfoot.getRandomNumber(30) == 2)
+        {
+            addObject(b2, 600, Greenfoot.getRandomNumber(600));
+            if (b2.getX() < 100) {
+                removeObject(b2);
+            }
+        }
+        if (Greenfoot.getRandomNumber(30) == 3)
+        {
+            addObject(b3, 600, Greenfoot.getRandomNumber(600));
+            if (b3.getX() < 100) {
+                removeObject(b3);
+            }
+        }
     }
     
     public int countBalls() {
