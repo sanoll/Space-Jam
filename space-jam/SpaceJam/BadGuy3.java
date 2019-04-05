@@ -14,6 +14,6 @@ public class BadGuy3 extends obstacles
      */
     public void act() 
     {
-        // Add your action code here.
+        move(-5);
     }    
 }
