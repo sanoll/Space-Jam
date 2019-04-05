@@ -25,6 +25,7 @@ public class SpaceWorld extends ScrollingWorld
         addObject(new bugs(),100, 300);
         ballCount = 0;
         bucketCount = 0;
+        addObject(new Counter(), 100, 40);
     }
 
     public void act() {

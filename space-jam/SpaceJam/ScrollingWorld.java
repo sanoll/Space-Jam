@@ -16,7 +16,7 @@ public class ScrollingWorld extends World
      */
     public ScrollingWorld(int width, int height, int res, boolean bounded)
     {    
-        super(width, height, res, bounded); 
+        super(600, 600, 1, bounded); 
         speed = -2;
         score = 0;
     }
