@@ -13,12 +13,9 @@ public class SpaceWorld extends ScrollingWorld
     Basketball ball = new Basketball();
     Buckets goal = new Buckets();
     BadGuy1 b1 = new BadGuy1();
-<<<<<<< HEAD
     bugs bunny = new bugs();
-=======
     BadGuy2 b2 = new BadGuy2();
     BadGuy3 b3 = new BadGuy3();
->>>>>>> 5edc0559bf2f8b0ab1faf0d01b98bfb81ea467ed
     /**
      * Constructor for objects of class SpacWorld.
      * 
@@ -27,13 +24,10 @@ public class SpaceWorld extends ScrollingWorld
     {
         super(600, 600, 1, true);
         addObject(new bugs(),100, 300);
-        ballCount = 0;
+        ballCount = 3;
         bucketCount = 0;
-<<<<<<< HEAD
         setPaintOrder(bugs.class, Basketball.class, Buckets.class);
-=======
         addObject(new Counter(), 100, 40);
->>>>>>> 5edc0559bf2f8b0ab1faf0d01b98bfb81ea467ed
     }
 
     public void act() {

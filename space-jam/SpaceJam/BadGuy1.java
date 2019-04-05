@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BadGuy1 extends obstacles
 {
+    SpaceWorld world = (SpaceWorld) getWorld();
     /**
      * Act - do whatever the BadGuy1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,6 +16,10 @@ public class BadGuy1 extends obstacles
     public void act() 
     {
         move(-4);
-        removeTouching(bugs.class);
+        bugs bunny = (bugs) getOneIntersectingObject(bugs.class);
+        if (bunny != null) {
+            getWorld().removeObject(bunny);
+            Greenfoot.stop();
+        }
     }    
 }
