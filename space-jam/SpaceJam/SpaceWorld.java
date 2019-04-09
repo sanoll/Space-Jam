@@ -17,6 +17,7 @@ public class SpaceWorld extends ScrollingWorld
     bugs bunny = new bugs();
     BadGuy2 b2 = new BadGuy2();
     BadGuy3 b3 = new BadGuy3();
+    shoot shot = new shoot();
     /**
      * Constructor for objects of class SpacWorld.
      * 
@@ -24,7 +25,7 @@ public class SpaceWorld extends ScrollingWorld
     public SpaceWorld()
     {
         super(600, 600, 1, true);
-        addObject(new bugs(),100, 300);
+        addObject(new bugs(),150, 300);
         ballCount = 3;
         bucketCount = 0;
         setPaintOrder(bugs.class, Basketball.class, Buckets.class, Counter.class);

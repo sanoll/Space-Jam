@@ -9,6 +9,7 @@ public class bugs extends Actor
     public void act() 
     {
         SpaceWorld world = (SpaceWorld) getWorld();
+        shoot shot = new shoot();
         if(Greenfoot.isKeyDown("down"))
         {
             setLocation(getX(),getY()+9);
@@ -32,6 +33,13 @@ public class bugs extends Actor
             SpaceWorld spaceworld = (SpaceWorld)world;
             Counter counter = spaceworld.getCounter();
             counter.addScore();
+        }
+        shoot();
+    }
+    
+    public void shoot() {
+        if (Greenfoot.getKey() == "space") {
+            getWorld().addObject(new shoot(), 150, this.getY());
         }
     }
 }
