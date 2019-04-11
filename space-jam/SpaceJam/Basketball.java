@@ -20,5 +20,8 @@ public class Basketball extends Collectables
     public void act() 
     {
         move(-5);
+        if (this.isAtEdge()) {
+            getWorld().removeObject(this);
+        }
     }    
 }

@@ -17,12 +17,12 @@ public class shoot extends Actor
     {
         // Add your action code here.
         move(5);
-        if (this.isAtEdge()) {
-            getWorld().removeObject(this);
-        }
         obstacles badGuys = (obstacles) getOneIntersectingObject(obstacles.class);
         if (badGuys != null) {
             getWorld().removeObject(badGuys);
+        }
+        if (this.isAtEdge()) {
+            getWorld().removeObject(this);
         }
     } 
 }

@@ -2,13 +2,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class bugs extends Actor
 {
+    SpaceWorld world = (SpaceWorld) getWorld();
+    int ballCount;
+    int bucketCount;
+    public bugs() {
+        ballCount = 3;
+        bucketCount = 0;
+    }
     /**
      * Act - do whatever the bugs wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        SpaceWorld world = (SpaceWorld) getWorld();
         shoot shot = new shoot();
         if(Greenfoot.isKeyDown("down"))
         {
@@ -23,23 +29,21 @@ public class bugs extends Actor
         Basketball ball = (Basketball) getOneIntersectingObject(Basketball.class);
         if (ball != null) {
             getWorld().removeObject(ball);
-            world.ballCount++;
+            ballCount++;
         }
         Buckets goal = (Buckets) getOneIntersectingObject(Buckets.class);
         if (goal != null) {
             getWorld().removeObject(goal);
-            
-            world.bucketCount++;
+            bucketCount++;
             SpaceWorld spaceworld = (SpaceWorld)world;
-            Counter counter = spaceworld.getCounter();
-            counter.addScore();
         }
         shoot();
     }
     
     public void shoot() {
-        if (Greenfoot.getKey() == "space") {
-            getWorld().addObject(new shoot(), 150, this.getY());
+        if (Greenfoot.getKey() == "space" && ballCount > 0) {
+            getWorld().addObject(new shoot(), 210, this.getY() + 20);
+            ballCount--;
         }
     }
 }

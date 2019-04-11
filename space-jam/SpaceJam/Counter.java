@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Counter extends Actor
 {
     int score;
+    bugs bunny = new bugs();
     public Counter() {
-        score = 0;
+        score = bunny.bucketCount;
     }
    
     /**
@@ -19,8 +20,7 @@ public class Counter extends Actor
      */
     public void act() 
     {
-        setImage(new GreenfootImage("Score : " + score, 24, Color.GREEN, Color.BLACK));
-      
+        setImage(new GreenfootImage("Score : " + bunny.bucketCount, 24, Color.GREEN, Color.BLACK));
     } 
     public void addScore()
     {

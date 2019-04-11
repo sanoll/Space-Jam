@@ -20,6 +20,12 @@ public class BadGuy2 extends obstacles
         if (bunny != null) {
             getWorld().removeObject(bunny);
             Greenfoot.stop();
+            SpaceWorld world = (SpaceWorld) getWorld();
+            GameOver gameover = new GameOver();
+            world.addObject(gameover,world.getWidth()/2,world.getHeight()/2);
+        }
+        if (this.isAtEdge()) {
+            getWorld().removeObject(this);
         }
     }    
 }
