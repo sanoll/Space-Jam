@@ -1,44 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * A Counter class that allows you to display a numerical value on screen.
- * 
- * The Counter is an actor, so you will need to create it, and then add it to
- * the world in Greenfoot.  If you keep a reference to the Counter then you
- * can adjust its value.  Here's an example of a world class that
- * displays a counter with the number of act cycles that have occurred:
- * 
- * <pre>
- * class CountingWorld
- * {
- *     private Counter actCounter;
- *     
- *     public CountingWorld()
- *     {
- *         super(600, 400, 1);
- *         actCounter = new Counter("Act Cycles: ");
- *         addObject(actCounter, 100, 100);
- *     }
- *     
- *     public void act()
- *     {
- *         actCounter.setValue(actCounter.getValue() + 1);
- *     }
- * }
- * </pre>
- * 
- * @author Neil Brown and Michael Kölling 
- * @version 1.0
+ * A BallCount class that allows you to display a numerical value on screen.
  */
-public class Counter extends Actor
+public class BallCount extends Actor
 {
     private static final Color transparent = new Color(0,0,0,0);
     private GreenfootImage background;
     private int value;
     private int target;
     private String prefix;
+    bugs bunny = new bugs();
     
-    public Counter()
+    public BallCount()
     {
         this(new String());
     }
@@ -46,11 +20,11 @@ public class Counter extends Actor
     /**
      * Create a new counter, initialised to 0.
      */
-    public Counter(String prefix)
+    public BallCount(String prefix)
     {
         background = getImage();  // get image from class
         value = 0;
-        target = 0;
+        target = 3;
         this.prefix = prefix;
         updateImage();
     }

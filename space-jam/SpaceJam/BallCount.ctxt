@@ -1,10 +1,10 @@
 #BlueJ class context
-comment0.target=Counter
-comment0.text=\n\ A\ Counter\ class\ that\ allows\ you\ to\ display\ a\ numerical\ value\ on\ screen.\n\ \n\ The\ Counter\ is\ an\ actor,\ so\ you\ will\ need\ to\ create\ it,\ and\ then\ add\ it\ to\n\ the\ world\ in\ Greenfoot.\ \ If\ you\ keep\ a\ reference\ to\ the\ Counter\ then\ you\n\ can\ adjust\ its\ value.\ \ Here's\ an\ example\ of\ a\ world\ class\ that\n\ displays\ a\ counter\ with\ the\ number\ of\ act\ cycles\ that\ have\ occurred\:\n\ \n\ <pre>\n\ class\ CountingWorld\n\ {\n\ \ \ \ \ private\ Counter\ actCounter;\n\ \ \ \ \ \n\ \ \ \ \ public\ CountingWorld()\n\ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ super(600,\ 400,\ 1);\n\ \ \ \ \ \ \ \ \ actCounter\ \=\ new\ Counter("Act\ Cycles\:\ ");\n\ \ \ \ \ \ \ \ \ addObject(actCounter,\ 100,\ 100);\n\ \ \ \ \ }\n\ \ \ \ \ \n\ \ \ \ \ public\ void\ act()\n\ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ actCounter.setValue(actCounter.getValue()\ +\ 1);\n\ \ \ \ \ }\n\ }\n\ </pre>\n\ \n\ @author\ Neil\ Brown\ and\ Michael\ K\u00F6lling\ \n\ @version\ 1.0\n
+comment0.target=BallCount
+comment0.text=\n\ A\ BallCount\ class\ that\ allows\ you\ to\ display\ a\ numerical\ value\ on\ screen.\n
 comment1.params=
-comment1.target=Counter()
+comment1.target=BallCount()
 comment2.params=prefix
-comment2.target=Counter(java.lang.String)
+comment2.target=BallCount(java.lang.String)
 comment2.text=\n\ Create\ a\ new\ counter,\ initialised\ to\ 0.\n
 comment3.params=
 comment3.target=void\ act()

@@ -12,6 +12,4 @@ comment4.params=
 comment4.target=void\ buckets()
 comment5.params=
 comment5.target=void\ obstacles()
-comment6.params=
-comment6.target=Counter\ getCounter()
-numComments=7
+numComments=6
