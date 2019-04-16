@@ -18,6 +18,7 @@ public class BadGuy2 extends obstacles
         move(-6);
         bugs bunny = (bugs) getOneIntersectingObject(bugs.class);
         if (bunny != null) {
+            Greenfoot.playSound("Minecraft Alpha Damage - Sound Effect.mp3");
             getWorld().removeObject(bunny);
             Greenfoot.stop();
             SpaceWorld world = (SpaceWorld) getWorld();

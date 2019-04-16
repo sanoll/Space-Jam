@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SpaceWorld extends ScrollingWorld
 {
+    GreenfootSound myMusic2 = new GreenfootSound("Drake - Gods Plan (Clean).mp3");
     Counter counter= new Counter();
+    
     Basketball ball = new Basketball();
     Buckets goal = new Buckets();
     BadGuy1 b1 = new BadGuy1();
@@ -22,6 +24,7 @@ public class SpaceWorld extends ScrollingWorld
      */
     public SpaceWorld()
     {
+        
         super(600, 600, 1, true);
         addObject(new bugs(),150, 300);
         setPaintOrder(bugs.class, Basketball.class, Buckets.class, Counter.class);
@@ -30,6 +33,9 @@ public class SpaceWorld extends ScrollingWorld
 
     public void act() {
         scroll();
+        myMusic2.play();
+        myMusic2.setVolume(30);
+        
         balls();
         buckets();
         obstacles();

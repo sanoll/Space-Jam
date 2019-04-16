@@ -19,7 +19,9 @@ public class shoot extends Actor
         move(5);
         obstacles badGuys = (obstacles) getOneIntersectingObject(obstacles.class);
         if (badGuys != null) {
+            Greenfoot.playSound("Death.mp3");
             getWorld().removeObject(badGuys);
+            
         }
         if (this.isAtEdge()) {
             getWorld().removeObject(this);

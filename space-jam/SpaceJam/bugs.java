@@ -33,6 +33,8 @@ public class bugs extends Actor
         }
         Buckets goal = (Buckets) getOneIntersectingObject(Buckets.class);
         if (goal != null) {
+            Greenfoot.playSound("Dunking.mp3");
+            
             getWorld().removeObject(goal);
             bucketCount++;
             SpaceWorld spaceworld = (SpaceWorld)world;
@@ -42,6 +44,7 @@ public class bugs extends Actor
     
     public void shoot() {
         if (Greenfoot.getKey() == "space" && ballCount > 0) {
+            Greenfoot.playSound("3 Pointer Sound Effect.mp3");
             getWorld().addObject(new shoot(), 210, this.getY() + 20);
             ballCount--;
         }
